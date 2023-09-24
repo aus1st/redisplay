@@ -1,0 +1,52 @@
+redis: 6379 pe chalta hai
+redis stack: for visualization
+docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+docker exec -it imageid bash (to run the bash inside redis image)
+ping
+\	PONG
+redis-cli ping
+redis-cli
+Data Types:
+string
+set key value
+set name ahmed
+get key
+get name
+
+convention
+<entity>:<id> value
+set user:1 ahmed
+nx (if key does not exist)
+xx (
+
+mget (to get multiple keys together):
+mget user:1 user:2 msg:3
+1) "ahmed"
+2) "aliza"
+3) "where have you been"
+
+mset (to set multiple keys together)
+
+incr (to increment the value)
+incrby 10(incremnet by 10)
+
+expire(to set expiry with the key)
+
+LIST
+lpush
+rpop
+------
+reflect queue
+
+
+lpush
+lpop
+------
+reflect stack
+
+lrange message 0 -1
+
+SETS (keep unique value)
+sadd
+srem
+sismember
